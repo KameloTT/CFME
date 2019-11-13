@@ -1,0 +1,16 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: ServiceTemplateProvisionRequest_approved
+    inherits: 
+    description: 
+  fields:
+  - rel6:
+      value: "/custom/multiapprove/Email/approvelevel"
+  - rel8:
+      value: "/Discovery/ObjectWalker/object_walker0"
+  - rel9:
+      value: "/custom/multiapprove/Email/approve"

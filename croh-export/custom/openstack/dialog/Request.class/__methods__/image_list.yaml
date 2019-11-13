@@ -1,0 +1,40 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: image_list
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: expression
+    data: |
+      ---
+      :db: ManageIQ::Providers::CloudManager::Template
+      :expression:
+        STARTS WITH:
+          field: ManageIQ::Providers::CloudManager::Template-name
+          value: :user_input
+    options: {}
+  inputs:
+  - field:
+      aetype: 
+      name: arg1
+      display_name: 
+      datatype: 
+      priority: 1
+      owner: 
+      default_value: "${/#dialog_sla}"
+      substitute: false
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 

@@ -1,0 +1,21 @@
+dialog_hash = {}
+$evm.object['required'] = false
+
+
+provider = $evm.vmdb(:ManageIQ_Providers_Azure_CloudManager).first
+provider.cloud_networks.each do |network|
+#    next unless flavor.enabled
+#    dialog_hash[flavor.id] = "#{flavor.name} on #{provider.name}"
+    $evm.log('info', "VISH_DEBUG #{network.name} on #{provider.name} with id #{network.id}")
+    $evm.log('info', "VISH_DEBUG #{$evm.object['dialog_cloud_network']}")
+    network.cloud_subnets.each do |subnet|
+        if network.id.to_i == $evm.object['dialog_cloud_network'].to_i
+          dialog_hash[subnet.id] = "#{subnet.name} (#{subnet.cidr})"
+          $evm.log('info', "VISH_DEBUG #{subnet.name} on #{network.name} with id #{subnet.cidr} and netid = #{network.id}")
+        end
+    end
+end
+
+$evm.object["values"] = dialog_hash
+#$evm.log(:info, "VISH_DEBUG $evm.object['values']: #{$evm.object['values'].inspect}")
+$evm.object['default_value'] = dialog_hash.first[0]

@@ -1,0 +1,8 @@
+# regexp to check string in dialog ['strace','tcpdump']
+     validator = "^\[((('[a-z|A-Z|0-9|-]*'(, ?)))*('[a-z|A-Z|0-9|-]*'))?\]$"
+
+#Delegate value to custom parametr in Ansible playbook
+	name of element in dialog should be "param_blablabla" where blablabla is parametr in ansible playbook.
+
+#Go limit to playbook
+	name of element should be "limit"

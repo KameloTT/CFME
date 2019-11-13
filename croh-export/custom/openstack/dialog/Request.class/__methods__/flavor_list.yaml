@@ -1,0 +1,19 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: flavor_list
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: expression
+    data: |
+      ---
+      :db: Flavor
+      :expression:
+        IS NOT NULL:
+          field: Flavor-name
+    options: {}
+  inputs: []

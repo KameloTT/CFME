@@ -1,0 +1,11 @@
+Host: smtp.gmail.com
+Port: 587    #if use TLS, if SSL port=465
+Domain: example.com
+TLS: yes
+SSL Verify: No
+Authentication: login
+User: yes
+Password: yes
+From: alexandr.vishnyakov@example.com
+Test: 2675@croc.ru
+

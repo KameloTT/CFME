@@ -1,0 +1,13 @@
+#Create button only for linux VM's
+	In Visibility Expression =  "VM and Instance.OS : Product Name REGULAR EXPRESSION MATCHES "(Linux|CentOS|Red Hat|rhel|RHEL)"
+
+#Button to call ansible playbook form AWX
+	In Attribute/Value Pairs = " job_template_name = name_of_playbooks"
+
+
+#To execute mothod from button
+	In "Object Details" = System/Process: Request
+			      Message: create
+			      Request: name_of_method
+
+
